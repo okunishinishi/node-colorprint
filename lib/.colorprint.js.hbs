@@ -40,46 +40,16 @@ Colorprint.prototype = {
     prefix: '',
     /** Message suffix */
     suffix: '',
+{{#each levels}}
     /**
-     * Print info message.
+     * Print {{lowercase @key}} message.
      * @param {...string} msg - Message to print.
      */
-    info: function (msg) {
+    {{lowercase @key}}: function (msg) {
         var s = this;
-        s._printLog(s._format.apply(s, arguments), 'green');
-    },
-    /**
-     * Print debug message.
-     * @param {...string} msg - Message to print.
-     */
-    debug: function (msg) {
-        var s = this;
-        s._printLog(s._format.apply(s, arguments), 'black');
-    },
-    /**
-     * Print trace message.
-     * @param {...string} msg - Message to print.
-     */
-    trace: function (msg) {
-        var s = this;
-        s._printLog(s._format.apply(s, arguments), 'white');
-    },
-    /**
-     * Print error message.
-     * @param {...string} msg - Message to print.
-     */
-    error: function (msg) {
-        var s = this;
-        s._printError(s._format.apply(s, arguments), 'red');
-    },
-    /**
-     * Print fatal message.
-     * @param {...string} msg - Message to print.
-     */
-    fatal: function (msg) {
-        var s = this;
-        s._printError(s._format.apply(s, arguments), 'bgRed');
-    }
+        s.{{#if error}}_printError{{else}}_printLog{{/if}}(s._format.apply(s, arguments), '{{color}}');
+    }{{#if @last}}{{else}},{{/if}}
+{{/each}}
 };
 
 

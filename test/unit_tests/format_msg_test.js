@@ -11,3 +11,10 @@ exports['Format msg'] = function (test) {
     test.done();
 };
 
+
+exports['Format msg with object'] = function (test) {
+    var msg = formatMsg({foo: 'bar'}, null);
+    test.ok(msg);
+    test.done();
+};
+
