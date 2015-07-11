@@ -1,11 +1,14 @@
 {
     "name": "colorprint",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Print ansi-colored message to stdout/stderr.",
-    "main": "index.js",
+    "main": "lib",
     "directories": {
         "doc": "docs",
         "test": "test"
+    },
+    "bin": {
+        "colorprint": "bin/colorprint"
     },
     "scripts": {
         "unittest": "nodeunit",
