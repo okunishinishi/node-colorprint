@@ -3,9 +3,9 @@ Links
 
 ### Website
 
-+ [stringcase]({{pkg.homepage}})
-+ [stringcase @npm][my_npm_url]
-+ [stringcase @github][my_repo_url]
++ [colorprint]({{pkg.homepage}})
++ [colorprint @npm][my_npm_url]
++ [colorprint @github][my_repo_url]
 
 
 ### Documents

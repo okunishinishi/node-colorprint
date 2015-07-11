@@ -14,6 +14,7 @@ Print ansi-colored message to stdout/stderr.
 
 <!-- Badge end -->
 
+<img src="assets/images/screenshot.png"/>
 
 <!-- Table start -->
 
@@ -21,7 +22,6 @@ Table of Contents
 -----
 - [How to](#01-howto)
     - [Usage](#01-howto--usage)
-    - [Example](#01-howto--example)
     - [Install](#01-howto--install)
 - [Using via cli](#02-cli)
     - [CLI Usage](#02-cli--c-l-i--usage)
@@ -62,16 +62,11 @@ colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 
 Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 
-<a name="01-howto--example"></a>
-### Example
-
-<img src="assets/images/screenshot.png"/>
-
 <a name="01-howto--install"></a>
 ### Install
 
 ```
-$ npm install stringcase --save
+$ npm install colorprint --save
 ```
 
 <a name="02-cli"></a>
@@ -100,7 +95,7 @@ Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 ### Install global for CLI usage.
 
 ```
-$ npm install stringcase --g
+$ npm install colorprint --g
 ```
 
 <a name="03-customizing"></a>
@@ -129,7 +124,11 @@ var colorprint = new Colorprint({
 });
 colorprint.info('This will be blue with prefix.');
 
+
 ```
+
+colorpint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
+
 <a name="09-links"></a>
 Links
 ------
@@ -137,9 +136,9 @@ Links
 <a name="09-links--website"></a>
 ### Website
 
-+ [stringcase](https://github.com/okunishinishi/colorprint#readme)
-+ [stringcase @npm][my_npm_url]
-+ [stringcase @github][my_repo_url]
++ [colorprint](https://github.com/okunishinishi/colorprint#readme)
++ [colorprint @npm][my_npm_url]
++ [colorprint @github][my_repo_url]
 
 
 <a name="09-links--documents"></a>

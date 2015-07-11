@@ -103,11 +103,11 @@
 <a href="http://www.npmjs.org/package/colorprint"><img src="http://img.shields.io/npm/v/colorprint.svg?style=flat" alt="npm version"></a>
 <a href="https://gratipay.com/okunishinishi/"><img src="http://img.shields.io/gratipay/okunishinishi.svg?style=flat" alt="Gratipay"></a></p>
 <!-- Badge end -->
+<p><img src="assets/images/screenshot.png"/></p>
 <!-- Table start -->
 <h2>Table of Contents</h2><ul>
 <li><a href="#01-howto">How to</a><ul>
 <li><a href="#01-howto--usage">Usage</a></li>
-<li><a href="#01-howto--example">Example</a></li>
 <li><a href="#01-howto--install">Install</a></li>
 </ul>
 </li>
@@ -144,10 +144,8 @@ colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
 colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
 colorpint.error('This is ERROR'); //Pipe to stderr with red color.
 colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
-<p><a name="01-howto--example"></a></p>
-<h3>Example</h3><p><img src="assets/images/screenshot.png"/></p>
 <p><a name="01-howto--install"></a></p>
-<h3>Install</h3><pre class="prettyprint source"><code>$ npm install stringcase --save</code></pre><p><a name="02-cli"></a></p>
+<h3>Install</h3><pre class="prettyprint source"><code>$ npm install colorprint --save</code></pre><p><a name="02-cli"></a></p>
 <h2>Using via cli</h2><p><a name="02-cli--c-l-i--usage"></a></p>
 <h3>CLI Usage</h3><pre class="prettyprint source lang-bash"><code>#!/bin/bash
 
@@ -157,7 +155,7 @@ colorpint trace &quot;This is TRACE from CLI&quot; # Pipe to stdout with white c
 colorpint error &quot;This is ERROR from CLI&quot; # Pipe to stderr with red color.
 colorpint fatal &quot;This is FATAL from CLI&quot; # Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
 <p><a name="02-cli--install-global-for--c-l-i-usage-"></a></p>
-<h3>Install global for CLI usage.</h3><pre class="prettyprint source"><code>$ npm install stringcase --g</code></pre><p><a name="03-customizing"></a></p>
+<h3>Install global for CLI usage.</h3><pre class="prettyprint source"><code>$ npm install colorprint --g</code></pre><p><a name="03-customizing"></a></p>
 <h2>Customizing</h2><p><a name="03-customizing--customize-the-whole-module-"></a></p>
 <h3>Customize the whole module.</h3><pre class="prettyprint source lang-javascript"><code>var colorprint = require('colorprint');
 colorprint.PREFIX='Yeah!';
@@ -168,12 +166,13 @@ var colorprint = new Colorprint({
     PREFIX: '[Foo]',
     INFO_COLOR: 'blue'
 });
-colorprint.info('This will be blue with prefix.');</code></pre><p><a name="09-links"></a></p>
+colorprint.info('This will be blue with prefix.');</code></pre><p>colorpint is using <a href="https://github.com/medikoo/cli-color">cli-color</a> for coloring and you can see <a href="https://github.com/medikoo/cli-color#colors">available colors here</a>.</p>
+<p><a name="09-links"></a></p>
 <h2>Links</h2><p><a name="09-links--website"></a></p>
 <h3>Website</h3><ul>
-<li><a href="https://github.com/okunishinishi/colorprint#readme">stringcase</a></li>
-<li><a href="http://www.npmjs.org/package/colorprint">stringcase @npm</a></li>
-<li><a href="https://github.com/okunishinishi/node-colorprint">stringcase @github</a></li>
+<li><a href="https://github.com/okunishinishi/colorprint#readme">colorprint</a></li>
+<li><a href="http://www.npmjs.org/package/colorprint">colorprint @npm</a></li>
+<li><a href="https://github.com/okunishinishi/node-colorprint">colorprint @github</a></li>
 </ul>
 <p><a name="09-links--documents"></a></p>
 <h3>Documents</h3><ul>

@@ -21,4 +21,7 @@ var colorprint = new Colorprint({
 });
 colorprint.info('This will be blue with prefix.');
 
+
 ```
+
+colorpint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
