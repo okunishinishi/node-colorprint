@@ -1,0 +1,49 @@
+{
+  "name": "colorprint",
+  "version": "1.0.0",
+  "description": "Print ansi-colored message to stdout/stderr.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "unittest": "nodeunit",
+    "cover": "istanbul cover nodeunit",
+    "report": "codeclimate",
+    "apiguide": "jsdoc",
+    "render": "coz render"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okunishinishi/colorprint.git"
+  },
+  "keywords": [
+    "ansi",
+    "color",
+    "console",
+    "print",
+    "log"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/colorprint/issues"
+  },
+  "devDependencies": {
+    "coz": "^1.0.20",
+    "nodeunit": "^0.9.1",
+    "codeclimate-test-reporter": "0.0.4",
+    "ink-docstrap": "^0.4.12",
+    "istanbul": "^0.3.14",
+    "jsdoc": "^3.3.0"
+  },
+  "homepage": "https://github.com/okunishinishi/colorprint#readme",
+  "dependencies": {
+    "cli-color": "^1.0.0",
+    "extend": "^3.0.0"
+  }
+}

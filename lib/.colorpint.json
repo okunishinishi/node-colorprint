@@ -1,0 +1,22 @@
+{
+  "INFO": {
+    "color": "green",
+    "error": false
+  },
+  "DEBUG": {
+    "color": "black",
+    "error": false
+  },
+  "TRACE": {
+    "color": "white",
+    "error": false
+  },
+  "ERROR": {
+    "color": "red",
+    "error": true
+  },
+  "FATAL": {
+    "color": "bgRed",
+    "error": true
+  }
+}
