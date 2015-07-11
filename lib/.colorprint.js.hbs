@@ -23,7 +23,7 @@ Colorprint.prototype = {
     _format: function () {
         var s = this;
         var msg = formatMsg.apply(formatMsg, arguments);
-        return [s.prefix, msg, s.suffix].join('');
+        return [s.PREFIX, msg, s.SUFFIX].join('');
     },
     _printLog: function (msg, color) {
         console.log(decorateMsg(msg, color));
@@ -35,15 +35,22 @@ Colorprint.prototype = {
     /** Color for {{lowercase @key}} print. */
     {{uppercase @key}}_COLOR: '{{color}}',
 {{/each}}
+{{#each levels}}
+    /** Alias for module:colorprint/lib~Colorprint#{{lowercase @key}}. */
+    {{uppercase @key}}: function () {
+        var s = this;
+        s.{{lowercase @key}}.apply(s, arguments);
+    },
+{{/each}}
     /** @constructs module:colorprint/lib~Colorprint */
     init: function (config) {
         var s = this;
         extend(s, config);
     },
     /** Message prefix */
-    prefix: '',
+    PREFIX: '',
     /** Message suffix */
-    suffix: '',
+    SUFFIX: '',
 {{#each levels}}
     /**
      * Print {{lowercase @key}} message.

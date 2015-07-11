@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>colorprint Source: lib/ext.js</title>
+	<title>colorprint Source: ext.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -70,7 +70,7 @@
 					
 
 
-		<h1 class="page-title">Source: lib/ext.js</h1>
+		<h1 class="page-title">Source: ext.js</h1>
     
 <section>
 	<article>
@@ -87,6 +87,10 @@ module.exports = {
      * This is an alias for {@link https://www.npmjs.org/package/cli-color|cli-color@^1.0.0} module.
      */
     get cliColor() { return require('cli-color'); },
+    /**
+     * This is an alias for {@link https://www.npmjs.org/package/commander|commander@^2.8.1} module.
+     */
+    get commander() { return require('commander'); },
     /**
      * This is an alias for {@link https://www.npmjs.org/package/extend|extend@^3.0.0} module.
      */

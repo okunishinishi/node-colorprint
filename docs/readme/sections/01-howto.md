@@ -3,15 +3,17 @@ How to
 
 ### Usage
 
-
-```Javascript
-var stringcase = require('stringcase');
-{{#each usages}}{{#each samples}}stringcase.{{../name}}('{{src}}'); // => "{{converted}}" 
+```javascript
+var colorpint = require('colorpint');
+{{#each usages}}{{#each samples}}colorpint.{{../name}}('{{src}}'); //Pipe to {{pipe}} with {{color}} color.
 {{/each}}{{/each}}
 ```
 
-Fore more detail, see [API Guide of stringcase functions][my_lib_apiguide_url].
+Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 
+### Example
+
+<img src="assets/images/screenshot.png"/>
 
 ### Install
 

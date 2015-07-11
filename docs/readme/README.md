@@ -21,7 +21,14 @@ Table of Contents
 -----
 - [How to](#01-howto)
     - [Usage](#01-howto--usage)
+    - [Example](#01-howto--example)
     - [Install](#01-howto--install)
+- [Using via cli](#02-cli)
+    - [CLI Usage](#02-cli--c-l-i--usage)
+    - [Install global for CLI usage.](#02-cli--install-global-for--c-l-i-usage-)
+- [Customizing](#03-customizing)
+    - [Customize the whole module.](#03-customizing--customize-the-whole-module-)
+    - [Create new context to customize.](#03-customizing--create-new-context-to-customize-)
 - [Links](#09-links)
     - [Website](#09-links--website)
     - [Documents](#09-links--documents)
@@ -43,14 +50,22 @@ How to
 <a name="01-howto--usage"></a>
 ### Usage
 
-
-```Javascript
-var stringcase = require('stringcase');
+```javascript
+var colorpint = require('colorpint');
+colorpint.info('This is INFO'); //Pipe to stdout with green color.
+colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
+colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
+colorpint.error('This is ERROR'); //Pipe to stderr with red color.
+colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 
 ```
 
-Fore more detail, see [API Guide of stringcase functions][my_lib_apiguide_url].
+Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 
+<a name="01-howto--example"></a>
+### Example
+
+<img src="assets/images/screenshot.png"/>
 
 <a name="01-howto--install"></a>
 ### Install
@@ -59,6 +74,62 @@ Fore more detail, see [API Guide of stringcase functions][my_lib_apiguide_url].
 $ npm install stringcase --save
 ```
 
+<a name="02-cli"></a>
+Using via cli
+-------
+
+<a name="02-cli--c-l-i--usage"></a>
+### CLI Usage
+
+```bash
+#!/bin/bash
+
+colorpint info "This is INFO from CLI" # Pipe to stdout with green color.
+colorpint debug "This is DEBUG from CLI" # Pipe to stdout with  color.
+colorpint trace "This is TRACE from CLI" # Pipe to stdout with white color.
+colorpint error "This is ERROR from CLI" # Pipe to stderr with red color.
+colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
+
+```
+
+Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
+
+
+
+<a name="02-cli--install-global-for--c-l-i-usage-"></a>
+### Install global for CLI usage.
+
+```
+$ npm install stringcase --g
+```
+
+<a name="03-customizing"></a>
+Customizing
+--------
+
+<a name="03-customizing--customize-the-whole-module-"></a>
+### Customize the whole module.
+
+```javascript
+var colorprint = require('colorprint');
+colorprint.PREFIX='Yeah!';
+colorprint.INFO_COLOR='blue';
+colorprint.info('This will be blue with prefix.');
+
+```
+
+<a name="03-customizing--create-new-context-to-customize-"></a>
+### Create new context to customize.
+
+```javascript
+var Colorprint = require('colorprint/lib/colorprint');
+var colorprint = new Colorprint({
+    PREFIX: '[Foo]',
+    INFO_COLOR: 'blue'
+});
+colorprint.info('This will be blue with prefix.');
+
+```
 <a name="09-links"></a>
 Links
 ------

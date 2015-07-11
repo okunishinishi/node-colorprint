@@ -107,7 +107,18 @@
 <h2>Table of Contents</h2><ul>
 <li><a href="#01-howto">How to</a><ul>
 <li><a href="#01-howto--usage">Usage</a></li>
+<li><a href="#01-howto--example">Example</a></li>
 <li><a href="#01-howto--install">Install</a></li>
+</ul>
+</li>
+<li><a href="#02-cli">Using via cli</a><ul>
+<li><a href="#02-cli--c-l-i--usage">CLI Usage</a></li>
+<li><a href="#02-cli--install-global-for--c-l-i-usage-">Install global for CLI usage.</a></li>
+</ul>
+</li>
+<li><a href="#03-customizing">Customizing</a><ul>
+<li><a href="#03-customizing--customize-the-whole-module-">Customize the whole module.</a></li>
+<li><a href="#03-customizing--create-new-context-to-customize-">Create new context to customize.</a></li>
 </ul>
 </li>
 <li><a href="#09-links">Links</a><ul>
@@ -127,9 +138,37 @@
 <!-- Sections start -->
 <p><a name="01-howto"></a></p>
 <h2>How to</h2><p><a name="01-howto--usage"></a></p>
-<h3>Usage</h3><pre class="prettyprint source lang-Javascript"><code>var stringcase = require('stringcase');</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/colorprint/apiguide/module-colorprint_lib.html">API Guide of stringcase functions</a>.</p>
+<h3>Usage</h3><pre class="prettyprint source lang-javascript"><code>var colorpint = require('colorpint');
+colorpint.info('This is INFO'); //Pipe to stdout with green color.
+colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
+colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
+colorpint.error('This is ERROR'); //Pipe to stderr with red color.
+colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
+<p><a name="01-howto--example"></a></p>
+<h3>Example</h3><p><img src="assets/images/screenshot.png"/></p>
 <p><a name="01-howto--install"></a></p>
-<h3>Install</h3><pre class="prettyprint source"><code>$ npm install stringcase --save</code></pre><p><a name="09-links"></a></p>
+<h3>Install</h3><pre class="prettyprint source"><code>$ npm install stringcase --save</code></pre><p><a name="02-cli"></a></p>
+<h2>Using via cli</h2><p><a name="02-cli--c-l-i--usage"></a></p>
+<h3>CLI Usage</h3><pre class="prettyprint source lang-bash"><code>#!/bin/bash
+
+colorpint info &quot;This is INFO from CLI&quot; # Pipe to stdout with green color.
+colorpint debug &quot;This is DEBUG from CLI&quot; # Pipe to stdout with  color.
+colorpint trace &quot;This is TRACE from CLI&quot; # Pipe to stdout with white color.
+colorpint error &quot;This is ERROR from CLI&quot; # Pipe to stderr with red color.
+colorpint fatal &quot;This is FATAL from CLI&quot; # Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
+<p><a name="02-cli--install-global-for--c-l-i-usage-"></a></p>
+<h3>Install global for CLI usage.</h3><pre class="prettyprint source"><code>$ npm install stringcase --g</code></pre><p><a name="03-customizing"></a></p>
+<h2>Customizing</h2><p><a name="03-customizing--customize-the-whole-module-"></a></p>
+<h3>Customize the whole module.</h3><pre class="prettyprint source lang-javascript"><code>var colorprint = require('colorprint');
+colorprint.PREFIX='Yeah!';
+colorprint.INFO_COLOR='blue';
+colorprint.info('This will be blue with prefix.');</code></pre><p><a name="03-customizing--create-new-context-to-customize-"></a></p>
+<h3>Create new context to customize.</h3><pre class="prettyprint source lang-javascript"><code>var Colorprint = require('colorprint/lib/colorprint');
+var colorprint = new Colorprint({
+    PREFIX: '[Foo]',
+    INFO_COLOR: 'blue'
+});
+colorprint.info('This will be blue with prefix.');</code></pre><p><a name="09-links"></a></p>
 <h2>Links</h2><p><a name="09-links--website"></a></p>
 <h3>Website</h3><ul>
 <li><a href="https://github.com/okunishinishi/colorprint#readme">stringcase</a></li>

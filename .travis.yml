@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '0.11'
+before_install: 
+install:
+- npm install
+before_script:
+- npm link .
+script:
+- "./ci/bin/build.sh"
+- "./ci/bin/test.sh"
+- "./ci/bin/cover.sh"
+- "./ci/bin/report.sh"
+env:
+  global:
+    secure: pUS22S9gKEAtDgjLnXdiCxz7Mg84nU4LEjpzTWuRky6bh/WSkGP8sNDeJjVEaCV4QnNiRtdBwrMTM4nSsPDosvhL2FDZyAtn7EjEkbZFrK7OPUq/QaGAkLuudJmHo6C2k08k6EfX7F8gvQ2pTtQfZ+Afga1xfYOxutkkiWPFkDznTIRYp/ENz9l+1UOKkPH5u6kAabaFLlWn+6LfjR2cIDPk16GtaSjbMBs5yaHcHWsZFkC94mbd0tcREi1EDG+JLGQVgwd9YrnWnED1zhQB2JPmjK42HAmvh6EF2lKmKlbtw4nWGKpBtaHAHK2/zmxlCu8enaGF8mR8PzBYgv1MFzqqSjqBQa0pEYyql5sJiKkY4aUTOHLuFLalsjd6R1vmCV75vlJcZlvhOzFi/8d5pLgeQWWV/dayrdmo/mTgWC4F8rFMYRmfKBOyeja9VCwtWRdeLiRm+IXIqVHm2NEFRC6of+wMcVanx8lt/AbifQtW9q/CvrMbZcZOuiMhCs5ZwmT3BVRrHbIR7ddJHsmBNs7r3i2++e/+/8Sdfgf8xyEfhIJ9cLCcoPTHmFPXWI2yceGLxM9TAYD4c+Aw6LbTo00KnI6Ch8Pf6I6lkcXpJeZkjUyzg9hhptzdANCEpi1LG2j3VZf1tN0YbzkeZIR7HAfQiCyTy6MBB9RzFbOWPdY=
