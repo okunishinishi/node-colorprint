@@ -195,7 +195,7 @@ Support this project and [others by okunishinishi][my_gratipay_url] via [gratipa
 [my_codeclimate_url]: http://codeclimate.com/github/okunishinishi/node-colorprint
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/okunishinishi/node-colorprint.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/okunishinishi/node-colorprint.svg?style=flat
-[my_apiguide_url]: http://okunishinishi.github.io/node-colorprint/
+[my_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide
 [my_lib_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html
 [my_coverage_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report
 [my_coverage_report_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report/
