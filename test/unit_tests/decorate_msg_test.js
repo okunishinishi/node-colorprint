@@ -7,6 +7,7 @@ var decorateMsg = require('../../lib/decorate_msg.js');
 
 exports['Decorate msg'] = function (test) {
     test.ok(decorateMsg('foo', 'green'));
+    test.equal(decorateMsg(null), null);
     test.done();
 };
 
