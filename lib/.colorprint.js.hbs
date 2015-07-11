@@ -13,7 +13,7 @@ var ext = require('./ext'),
     decorateMsg = require('./decorate_msg'),
     extend = ext.extend;
 
-/** @lends Colorprint */
+/** @lends module:colorprint/lib~Colorprint */
 function Colorprint() {
     var s = this;
     s.init.apply(s, arguments);
@@ -31,7 +31,11 @@ Colorprint.prototype = {
     _printError: function (msg, color) {
         console.error(decorateMsg(msg, color));
     },
-    /** @constructs Colorprint */
+{{#each levels}}
+    /** Color for {{lowercase @key}} print. */
+    {{uppercase @key}}_COLOR: '{{color}}',
+{{/each}}
+    /** @constructs module:colorprint/lib~Colorprint */
     init: function (config) {
         var s = this;
         extend(s, config);
@@ -47,7 +51,7 @@ Colorprint.prototype = {
      */
     {{lowercase @key}}: function (msg) {
         var s = this;
-        s.{{#if error}}_printError{{else}}_printLog{{/if}}(s._format.apply(s, arguments), '{{color}}');
+        s.{{#if error}}_printError{{else}}_printLog{{/if}}(s._format.apply(s, arguments), s.{{uppercase @key}}_COLOR);
     }{{#if @last}}{{else}},{{/if}}
 {{/each}}
 };

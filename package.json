@@ -44,6 +44,7 @@
   "homepage": "https://github.com/okunishinishi/colorprint#readme",
   "dependencies": {
     "cli-color": "^1.0.0",
+    "commander": "^2.8.1",
     "extend": "^3.0.0"
   }
 }

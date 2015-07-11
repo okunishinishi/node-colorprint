@@ -9,5 +9,6 @@ BASE_DIR=$(cd "${HERE}/../.." && pwd)
 
 cd ${BASE_DIR}
 
+bash ./ci/bin/render.sh
 bash ./ci/bin/doc/doc_readme.sh
 bash ./ci/bin/doc/doc_apiguide.sh

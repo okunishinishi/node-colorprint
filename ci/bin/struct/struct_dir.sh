@@ -9,6 +9,7 @@ BASE_DIR=$(cd "${HERE}/../../.." && pwd)
 
 cd ${BASE_DIR}
 
+mkdir -p bin
 mkdir -p ci
 mkdir -p ci/bin
 mkdir -p ci/bin/cover

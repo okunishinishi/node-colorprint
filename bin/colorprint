@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+"use strict";
+
+var program = require('commander'),
+    pkg = require('../package'),
+    colorprint = require('../lib');
+
+program
+    .version(pkg['version']);
+
+var levels = require('../lib/.colorprint.json');
+
+Object.keys(levels).forEach(function (key) {
+
+    var print = colorprint[key.toLowerCase()].bind(colorprint);
+
+    program
+        .command(key.toLowerCase() + ' [msg...]')
+        .description('Print message for "' + key + '" level.')
+        .action(function (msg) {
+
+            print.apply(print, msg);
+        });
+});
+
+program
+    .parse(process.argv);

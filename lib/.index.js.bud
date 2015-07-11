@@ -1,0 +1,34 @@
+/**
+ * Bud file for index.js
+ */
+
+"use strict";
+
+var Colorprint = require('./colorprint');
+
+module.exports = {
+    force: true,
+    mode: '444',
+    data: {
+        END_BRACE: '}',
+        pkg: require('../package.json'),
+        get submodules() {
+            return {
+                ext: 'External modules installed via npm'
+            }
+        },
+        get links() {
+            return require('../docs/readme/.links.json');
+        },
+        get borrows() {
+            return Object.keys(Colorprint.prototype)
+                .filter(function (key) {
+                    return /^[^_]/.test(key);
+                });
+        }
+    }
+};
+
+if (!module.parent) {
+    require('coz').render(__filename);
+}
