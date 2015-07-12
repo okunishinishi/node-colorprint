@@ -18,7 +18,6 @@ mkdir -p ci/bin/doc
 mkdir -p ci/bin/report
 mkdir -p ci/bin/render
 mkdir -p ci/bin/struct
-mkdir -p ci/bin/tag
 mkdir -p ci/bin/test
 mkdir -p docs
 mkdir -p docs/reports

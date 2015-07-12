@@ -20,7 +20,7 @@ case ${answer:0:1} in
         bash ./ci/bin/doc.sh
         bash ./ci/bin/deploy.sh
         npm run versionup
-        npm run gittag
+        npm run taggit
         npm publish .
         git add . -A
         git commit -m 'Version up'
