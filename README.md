@@ -170,11 +170,6 @@ About this project
 + [Taka Okunishi](http://okunishitaka.com)
 
 <a name="11-project--donation"></a>
-### Donation
-
-Support this project and [others by okunishinishi][my_gratipay_url] via [gratipay][my_gratipay_url].
-
-[<img src="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg" alt="Support via Gratipay"/>][my_gratipay_url]
 
 
 <!-- Sections end -->
