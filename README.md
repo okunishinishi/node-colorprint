@@ -10,7 +10,6 @@ Print ansi-colored message to stdout/stderr.
 [![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
 [![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
 [![npm version][my_npm_budge_url]][my_npm_url]
-[![Gratipay][my_gratipay_budge_url]][my_gratipay_url]
 
 <!-- Badge end -->
 
@@ -199,8 +198,6 @@ Support this project and [others by okunishinishi][my_gratipay_url] via [gratipa
 [my_lib_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html
 [my_coverage_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report
 [my_coverage_report_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report/
-[my_gratipay_url]: https://gratipay.com/okunishinishi/
-[my_gratipay_budge_url]: http://img.shields.io/gratipay/okunishinishi.svg?style=flat
 [my_npm_url]: http://www.npmjs.org/package/colorprint
 [my_npm_budge_url]: http://img.shields.io/npm/v/colorprint.svg?style=flat
 [my_tag_url]: http://github.com/okunishinishi/node-colorprint/releases/tag/
