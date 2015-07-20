@@ -13,6 +13,7 @@ function _spawn(command, args) {
 }
 
 exports['Print.'] = function (test) {
+    _spawn(bin, ['notice', 'This is notice', 'from cli.']);
     _spawn(bin, ['info', 'This is info', 'from cli.']);
     _spawn(bin, ['debug', 'This is debug', 'from cli.']);
     _spawn(bin, ['trace', 'This is trace', 'from cli.']);

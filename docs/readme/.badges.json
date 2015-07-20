@@ -23,11 +23,5 @@
         "alt": "npm version",
         "img": "my_npm_budge_url",
         "link": "my_npm_url"
-    },
-    {
-        "alt": "Gratipay",
-        "img": "my_gratipay_budge_url",
-        "link": "my_gratipay_url"
     }
-
 ]

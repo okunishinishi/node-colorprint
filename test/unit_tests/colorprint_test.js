@@ -7,6 +7,7 @@ var Colorprint = require('../../lib/colorprint.js');
 
 exports['Colorprint'] = function (test) {
     var colorprint = new Colorprint({});
+    colorprint.notice('This is notice');
     colorprint.info('This is info');
     colorprint.debug('This is debug');
     colorprint.trace('This is trace');
@@ -25,7 +26,7 @@ exports['Customize color print.'] = function (test) {
     var colorprint = new Colorprint({
         PREFIX: 'Yeah!',
         SUFFIX: 'That\'s it!',
-        INFO_COLOR:'blue'
+        INFO_COLOR: 'blue'
     });
     colorprint.info('This will be blue with prefix.');
     test.done();

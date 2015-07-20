@@ -1,4 +1,8 @@
 {
+  "NOTICE": {
+    "color": "magenta",
+    "error": false
+  },
   "INFO": {
     "color": "green",
     "error": false

@@ -20,22 +20,19 @@ Print ansi-colored message to stdout/stderr.
 Table of Contents
 -----
 - [How to](#01-howto)
-    - [Usage](#01-howto--usage)
-    - [Install](#01-howto--install)
+    - [Usage](#01-howto-usage)
+    - [Install](#01-howto-install)
 - [Using via cli](#02-cli)
-    - [CLI Usage](#02-cli--c-l-i--usage)
-    - [Install global for CLI usage.](#02-cli--install-global-for--c-l-i-usage-)
+    - [CLI Usage](#02-cli-c-l-i--usage)
+    - [Install global for CLI usage.](#02-cli-install-global-for--c-l-i-usage-)
 - [Customizing](#03-customizing)
-    - [Customize the whole module.](#03-customizing--customize-the-whole-module-)
-    - [Create new context to customize.](#03-customizing--create-new-context-to-customize-)
+    - [Customize the whole module.](#03-customizing-customize-the-whole-module-)
+    - [Create new context to customize.](#03-customizing-create-new-context-to-customize-)
 - [Links](#09-links)
-    - [Website](#09-links--website)
-    - [Documents](#09-links--documents)
-    - [Reports](#09-links--reports)
+    - [Website](#09-links-website)
+    - [Documents](#09-links-documents)
+    - [Reports](#09-links-reports)
 - [License](#10-license)
-- [About this project](#11-project)
-    - [Author](#11-project--author)
-    - [Donation](#11-project--donation)
 
 <!-- Table end -->
 
@@ -46,11 +43,12 @@ Table of Contents
 How to
 -------
 
-<a name="01-howto--usage"></a>
+<a name="01-howto-usage"></a>
 ### Usage
 
 ```javascript
 var colorpint = require('colorpint');
+colorpint.notice('This is NOTICE'); //Pipe to stdout with magenta color.
 colorpint.info('This is INFO'); //Pipe to stdout with green color.
 colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
 colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
@@ -61,7 +59,7 @@ colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 
 Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 
-<a name="01-howto--install"></a>
+<a name="01-howto-install"></a>
 ### Install
 
 ```
@@ -72,12 +70,13 @@ $ npm install colorprint --save
 Using via cli
 -------
 
-<a name="02-cli--c-l-i--usage"></a>
+<a name="02-cli-c-l-i--usage"></a>
 ### CLI Usage
 
 ```bash
 #!/bin/bash
 
+colorpint notice "This is NOTICE from CLI" # Pipe to stdout with magenta color.
 colorpint info "This is INFO from CLI" # Pipe to stdout with green color.
 colorpint debug "This is DEBUG from CLI" # Pipe to stdout with  color.
 colorpint trace "This is TRACE from CLI" # Pipe to stdout with white color.
@@ -90,7 +89,7 @@ Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
 
 
 
-<a name="02-cli--install-global-for--c-l-i-usage-"></a>
+<a name="02-cli-install-global-for--c-l-i-usage-"></a>
 ### Install global for CLI usage.
 
 ```
@@ -101,7 +100,7 @@ $ npm install colorprint --g
 Customizing
 --------
 
-<a name="03-customizing--customize-the-whole-module-"></a>
+<a name="03-customizing-customize-the-whole-module-"></a>
 ### Customize the whole module.
 
 ```javascript
@@ -112,7 +111,7 @@ colorprint.info('This will be blue with prefix.');
 
 ```
 
-<a name="03-customizing--create-new-context-to-customize-"></a>
+<a name="03-customizing-create-new-context-to-customize-"></a>
 ### Create new context to customize.
 
 ```javascript
@@ -132,7 +131,7 @@ colorpint is using [cli-color](https://github.com/medikoo/cli-color) for colorin
 Links
 ------
 
-<a name="09-links--website"></a>
+<a name="09-links-website"></a>
 ### Website
 
 + [colorprint](https://github.com/okunishinishi/colorprint#readme)
@@ -140,12 +139,12 @@ Links
 + [colorprint @github][my_repo_url]
 
 
-<a name="09-links--documents"></a>
+<a name="09-links-documents"></a>
 ### Documents
 
 + [API Guide][my_apiguide_url]
 
-<a name="09-links--reports"></a>
+<a name="09-links-reports"></a>
 ### Reports
 
 + [Build Status @travis][my_travis_url]
@@ -157,19 +156,6 @@ Links
 License
 -------
 This software is released under the [MIT License][my_license_url].
-
-<a name="11-project"></a>
-About this project
---------
-
-[![Bitdeli Badge][my_bitdeli_badge_url]][bitdeli_url]
-
-<a name="11-project--author"></a>
-### Author
-
-+ [Taka Okunishi](http://okunishitaka.com)
-
-<a name="11-project--donation"></a>
 
 
 <!-- Sections end -->
@@ -193,6 +179,8 @@ About this project
 [my_lib_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html
 [my_coverage_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report
 [my_coverage_report_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report/
+[my_gratipay_url]: https://gratipay.com/okunishinishi/
+[my_gratipay_budge_url]: http://img.shields.io/gratipay/okunishinishi.svg?style=flat
 [my_npm_url]: http://www.npmjs.org/package/colorprint
 [my_npm_budge_url]: http://img.shields.io/npm/v/colorprint.svg?style=flat
 [my_tag_url]: http://github.com/okunishinishi/node-colorprint/releases/tag/
