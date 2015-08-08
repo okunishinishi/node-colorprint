@@ -17,9 +17,6 @@ module.exports = {
                 ext: 'External modules installed via npm'
             }
         },
-        get links() {
-            return require('../docs/readme/.links.json');
-        },
         get borrows() {
             return Object.keys(Colorprint.prototype)
                 .filter(function (key) {

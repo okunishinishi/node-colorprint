@@ -77,55 +77,31 @@
 
 
     <section class="readme-section">
-        <article><h1>colorprint</h1><p>Print ansi-colored message to stdout/stderr.</p>
-<!-- Badge start -->
+        <article><h1>colorprint</h1><!-- Badge Start -->
+<p><a name="badges"></a></p>
 <p><a href="http://travis-ci.org/okunishinishi/node-colorprint"><img src="http://img.shields.io/travis/okunishinishi/node-colorprint.svg?style=flat" alt="Build Status"></a>
 <a href="http://codeclimate.com/github/okunishinishi/node-colorprint"><img src="http://img.shields.io/codeclimate/github/okunishinishi/node-colorprint.svg?style=flat" alt="Code Climate"></a>
 <a href="http://codeclimate.com/github/okunishinishi/node-colorprint"><img src="http://img.shields.io/codeclimate/coverage/github/okunishinishi/node-colorprint.svg?style=flat" alt="Code Coverage"></a>
-<a href="http://gemnasium.com/okunishinishi/node-colorprint"><img src="http://img.shields.io/gemnasium/okunishinishi/node-colorprint.svg?style=flat" alt="dependencies"></a>
-<a href="http://www.npmjs.org/package/colorprint"><img src="http://img.shields.io/npm/v/colorprint.svg?style=flat" alt="npm version"></a></p>
-<!-- Badge end -->
-<p><img src="assets/images/screenshot.png"/></p>
-<!-- Table start -->
-<h2>Table of Contents</h2><ul>
-<li><a href="#01-howto">How to</a><ul>
-<li><a href="#01-howto-usage">Usage</a></li>
-<li><a href="#01-howto-install">Install</a></li>
-</ul>
-</li>
-<li><a href="#02-cli">Using via cli</a><ul>
-<li><a href="#02-cli-c-l-i--usage">CLI Usage</a></li>
-<li><a href="#02-cli-install-global-for--c-l-i-usage-">Install global for CLI usage.</a></li>
-</ul>
-</li>
-<li><a href="#03-customizing">Customizing</a><ul>
-<li><a href="#03-customizing-customize-the-whole-module-">Customize the whole module.</a></li>
-<li><a href="#03-customizing-create-new-context-to-customize-">Create new context to customize.</a></li>
-</ul>
-</li>
-<li><a href="#09-links">Links</a><ul>
-<li><a href="#09-links-website">Website</a></li>
-<li><a href="#09-links-documents">Documents</a></li>
-<li><a href="#09-links-reports">Reports</a></li>
-</ul>
-</li>
-<li><a href="#10-license">License</a></li>
-</ul>
-<!-- Table end -->
-<!-- Sections start -->
-<p><a name="01-howto"></a></p>
-<h2>How to</h2><p><a name="01-howto-usage"></a></p>
-<h3>Usage</h3><pre class="prettyprint source lang-javascript"><code>var colorpint = require('colorpint');
+<a href="http://www.npmjs.org/package/colorprint"><img src="http://img.shields.io/npm/v/colorprint.svg?style=flat" alt="npm Version"></a></p>
+<!-- Badge End -->
+<!-- Description Start -->
+<p><a name="description"></a></p>
+<p>Print ansi-colored message to stdout/stderr.</p>
+<!-- Description End -->
+<!-- Overview Start -->
+<p><a name="overview"></a>
+<img src="assets/images/screenshot.png"/></p>
+<!-- Overview End -->
+<!-- Sections Start -->
+<p><a name="sections"></a></p>
+<h2>Installation</h2><pre class="prettyprint source lang-bash"><code>npm install colorprint --save</code></pre><h2>Usage</h2><pre class="prettyprint source lang-javascript"><code>var colorpint = require('colorpint');
+
 colorpint.notice('This is NOTICE'); //Pipe to stdout with magenta color.
 colorpint.info('This is INFO'); //Pipe to stdout with green color.
 colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
 colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
 colorpint.error('This is ERROR'); //Pipe to stderr with red color.
-colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
-<p><a name="01-howto-install"></a></p>
-<h3>Install</h3><pre class="prettyprint source"><code>$ npm install colorprint --save</code></pre><p><a name="02-cli"></a></p>
-<h2>Using via cli</h2><p><a name="02-cli-c-l-i--usage"></a></p>
-<h3>CLI Usage</h3><pre class="prettyprint source lang-bash"><code>#!/bin/bash
+colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.</code></pre><h2>Using via CIL</h2><h3>CLI Usage</h3><pre class="prettyprint source lang-bash"><code>#!/bin/bash
 
 colorpint notice &quot;This is NOTICE from CLI&quot; # Pipe to stdout with magenta color.
 colorpint info &quot;This is INFO from CLI&quot; # Pipe to stdout with green color.
@@ -133,42 +109,20 @@ colorpint debug &quot;This is DEBUG from CLI&quot; # Pipe to stdout with  color.
 colorpint trace &quot;This is TRACE from CLI&quot; # Pipe to stdout with white color.
 colorpint error &quot;This is ERROR from CLI&quot; # Pipe to stderr with red color.
 colorpint fatal &quot;This is FATAL from CLI&quot; # Pipe to stderr with bgRed color.</code></pre><p>Fore more detail, see <a href="http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html">API Guide of colorpint functions</a>.</p>
-<p><a name="02-cli-install-global-for--c-l-i-usage-"></a></p>
-<h3>Install global for CLI usage.</h3><pre class="prettyprint source"><code>$ npm install colorprint --g</code></pre><p><a name="03-customizing"></a></p>
-<h2>Customizing</h2><p><a name="03-customizing-customize-the-whole-module-"></a></p>
-<h3>Customize the whole module.</h3><pre class="prettyprint source lang-javascript"><code>var colorprint = require('colorprint');
+<h3>Install global for CLI usage.</h3><pre class="prettyprint source"><code>$ npm install colorprint -g</code></pre><h2>Customizing</h2><h3>Customize the whole module.</h3><pre class="prettyprint source lang-javascript"><code>var colorprint = require('colorprint');
 colorprint.PREFIX='Yeah!';
 colorprint.INFO_COLOR='blue';
-colorprint.info('This will be blue with prefix.');</code></pre><p><a name="03-customizing-create-new-context-to-customize-"></a></p>
-<h3>Create new context to customize.</h3><pre class="prettyprint source lang-javascript"><code>var Colorprint = require('colorprint/lib/colorprint');
+colorprint.info('This will be blue with prefix.');</code></pre><h3>Create new context to customize.</h3><pre class="prettyprint source lang-javascript"><code>var Colorprint = require('colorprint/lib/colorprint');
 var colorprint = new Colorprint({
     PREFIX: '[Foo]',
     INFO_COLOR: 'blue'
 });
 colorprint.info('This will be blue with prefix.');</code></pre><p>colorpint is using <a href="https://github.com/medikoo/cli-color">cli-color</a> for coloring and you can see <a href="https://github.com/medikoo/cli-color#colors">available colors here</a>.</p>
-<p><a name="09-links"></a></p>
-<h2>Links</h2><p><a name="09-links-website"></a></p>
-<h3>Website</h3><ul>
-<li><a href="https://github.com/okunishinishi/colorprint#readme">colorprint</a></li>
-<li><a href="http://www.npmjs.org/package/colorprint">colorprint @npm</a></li>
-<li><a href="https://github.com/okunishinishi/node-colorprint">colorprint @github</a></li>
-</ul>
-<p><a name="09-links-documents"></a></p>
-<h3>Documents</h3><ul>
-<li><a href="http://okunishinishi.github.io/node-colorprint/apiguide">API Guide</a></li>
-</ul>
-<p><a name="09-links-reports"></a></p>
-<h3>Reports</h3><ul>
-<li><a href="http://travis-ci.org/okunishinishi/node-colorprint">Build Status @travis</a></li>
-<li><a href="http://codeclimate.com/github/okunishinishi/node-colorprint">Analysis Result @codeclimate</a></li>
-<li><a href="https://github.com/okunishinishi/colorprint/issues">Issues @github</a></li>
-<li><a href="http://okunishinishi.github.io/node-colorprint/coverage/lcov-report">Coverage Report</a></li>
-</ul>
-<p><a name="10-license"></a></p>
+<!-- Sections Start -->
+<!-- LICENSE Start -->
+<p><a name="license"></a></p>
 <h2>License</h2><p>This software is released under the <a href="https://github.com/okunishinishi/node-colorprint/blob/master/LICENSE">MIT License</a>.</p>
-<!-- Sections end -->
-<!-- Links start -->
-<!-- Links end--></article>
+<!-- LICENSE End --></article>
     </section>
 
 
@@ -194,7 +148,7 @@ colorprint.info('This will be blue with prefix.');</code></pre><p>colorpint is u
 
 <footer>
 
-	<script>var h=document.head;h.innerHTML=h.innerHTML+'<link rel="shortcut icon" href="docs/favicon.png"/>';</script>
+	<script>var h=document.head;h.innerHTML=h.innerHTML+'<link rel="shortcut icon" href="favicon.png"/>';</script>
 	<br />
 
 
@@ -205,7 +159,7 @@ colorprint.info('This will be blue with prefix.');</code></pre><p>colorpint is u
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a>
-	on 2015-07-20 using the <a
+	on 2015-08-08 using the <a
 	href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 </span>
 </footer>

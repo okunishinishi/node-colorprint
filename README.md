@@ -1,53 +1,59 @@
 colorprint
-=====
+==========
+
+<!-- Badge Start -->
+<a name="badges"></a>
+
+[![Build Status][bd_travis_shield_url]][bd_travis_url]
+[![Code Climate][bd_codeclimate_shield_url]][bd_codeclimate_url]
+[![Code Coverage][bd_codeclimate_coverage_shield_url]][bd_codeclimate_url]
+[![npm Version][bd_npm_shield_url]][bd_npm_url]
+
+[bd_repo_url]: https://github.com/okunishinishi/node-colorprint
+[bd_travis_url]: http://travis-ci.org/okunishinishi/node-colorprint
+[bd_travis_shield_url]: http://img.shields.io/travis/okunishinishi/node-colorprint.svg?style=flat
+[bd_license_url]: https://github.com/okunishinishi/node-colorprint/blob/master/LICENSE
+[bd_codeclimate_url]: http://codeclimate.com/github/okunishinishi/node-colorprint
+[bd_codeclimate_shield_url]: http://img.shields.io/codeclimate/github/okunishinishi/node-colorprint.svg?style=flat
+[bd_codeclimate_coverage_shield_url]: http://img.shields.io/codeclimate/coverage/github/okunishinishi/node-colorprint.svg?style=flat
+[bd_gemnasium_url]: https://gemnasium.com/okunishinishi/node-colorprint
+[bd_gemnasium_shield_url]: https://gemnasium.com/okunishinishi/node-colorprint.svg
+[bd_npm_url]: http://www.npmjs.org/package/colorprint
+[bd_npm_shield_url]: http://img.shields.io/npm/v/colorprint.svg?style=flat
+
+<!-- Badge End -->
+
+
+<!-- Description Start -->
+<a name="description"></a>
 
 Print ansi-colored message to stdout/stderr.
 
-<!-- Badge start -->
+<!-- Description End -->
 
-[![Build Status][my_travis_badge_url]][my_travis_url]
-[![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
-[![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
-[![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
-[![npm version][my_npm_budge_url]][my_npm_url]
 
-<!-- Badge end -->
-
+<!-- Overview Start -->
+<a name="overview"></a>
 <img src="assets/images/screenshot.png"/>
 
-<!-- Table start -->
+<!-- Overview End -->
 
-Table of Contents
+<!-- Sections Start -->
+<a name="sections"></a>
+
+Installation
 -----
-- [How to](#01-howto)
-    - [Usage](#01-howto-usage)
-    - [Install](#01-howto-install)
-- [Using via cli](#02-cli)
-    - [CLI Usage](#02-cli-c-l-i--usage)
-    - [Install global for CLI usage.](#02-cli-install-global-for--c-l-i-usage-)
-- [Customizing](#03-customizing)
-    - [Customize the whole module.](#03-customizing-customize-the-whole-module-)
-    - [Create new context to customize.](#03-customizing-create-new-context-to-customize-)
-- [Links](#09-links)
-    - [Website](#09-links-website)
-    - [Documents](#09-links-documents)
-    - [Reports](#09-links-reports)
-- [License](#10-license)
 
-<!-- Table end -->
+```bash
+npm install colorprint --save
+```
 
-
-<!-- Sections start -->
-
-<a name="01-howto"></a>
-How to
+Usage
 -------
-
-<a name="01-howto-usage"></a>
-### Usage
 
 ```javascript
 var colorpint = require('colorpint');
+
 colorpint.notice('This is NOTICE'); //Pipe to stdout with magenta color.
 colorpint.info('This is INFO'); //Pipe to stdout with green color.
 colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
@@ -57,20 +63,9 @@ colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 
 ```
 
-Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
-
-<a name="01-howto-install"></a>
-### Install
-
-```
-$ npm install colorprint --save
-```
-
-<a name="02-cli"></a>
-Using via cli
+Using via CIL
 -------
 
-<a name="02-cli-c-l-i--usage"></a>
 ### CLI Usage
 
 ```bash
@@ -83,24 +78,21 @@ colorpint trace "This is TRACE from CLI" # Pipe to stdout with white color.
 colorpint error "This is ERROR from CLI" # Pipe to stderr with red color.
 colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
 
+
 ```
 
-Fore more detail, see [API Guide of colorpint functions][my_lib_apiguide_url].
+Fore more detail, see [API Guide of colorpint functions](http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html).
 
 
-
-<a name="02-cli-install-global-for--c-l-i-usage-"></a>
 ### Install global for CLI usage.
 
 ```
-$ npm install colorprint --g
+$ npm install colorprint -g
 ```
 
-<a name="03-customizing"></a>
 Customizing
 --------
 
-<a name="03-customizing-customize-the-whole-module-"></a>
 ### Customize the whole module.
 
 ```javascript
@@ -111,7 +103,6 @@ colorprint.info('This will be blue with prefix.');
 
 ```
 
-<a name="03-customizing-create-new-context-to-customize-"></a>
 ### Create new context to customize.
 
 ```javascript
@@ -127,66 +118,17 @@ colorprint.info('This will be blue with prefix.');
 
 colorpint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
 
-<a name="09-links"></a>
-Links
-------
 
-<a name="09-links-website"></a>
-### Website
-
-+ [colorprint](https://github.com/okunishinishi/colorprint#readme)
-+ [colorprint @npm][my_npm_url]
-+ [colorprint @github][my_repo_url]
+<!-- Sections Start -->
 
 
-<a name="09-links-documents"></a>
-### Documents
+<!-- LICENSE Start -->
+<a name="license"></a>
 
-+ [API Guide][my_apiguide_url]
-
-<a name="09-links-reports"></a>
-### Reports
-
-+ [Build Status @travis][my_travis_url]
-+ [Analysis Result @codeclimate][my_codeclimate_url]
-+ [Issues @github](https://github.com/okunishinishi/colorprint/issues)
-+ [Coverage Report][my_coverage_url]
-
-<a name="10-license"></a>
 License
 -------
-This software is released under the [MIT License][my_license_url].
+This software is released under the [MIT License](https://github.com/okunishinishi/node-colorprint/blob/master/LICENSE).
 
+<!-- LICENSE End -->
 
-<!-- Sections end -->
-
-
-<!-- Links start -->
-
-[nodejs_url]: http://nodejs.org/
-[npm_url]: https://www.npmjs.com/
-[nvm_url]: https://github.com/creationix/nvm
-[bitdeli_url]: https://bitdeli.com/free
-[my_bitdeli_badge_url]: https://d2weczhvl823v0.cloudfront.net/okunishinishi/node-colorprint/trend.png
-[my_repo_url]: https://github.com/okunishinishi/node-colorprint
-[my_travis_url]: http://travis-ci.org/okunishinishi/node-colorprint
-[my_travis_badge_url]: http://img.shields.io/travis/okunishinishi/node-colorprint.svg?style=flat
-[my_license_url]: https://github.com/okunishinishi/node-colorprint/blob/master/LICENSE
-[my_codeclimate_url]: http://codeclimate.com/github/okunishinishi/node-colorprint
-[my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/okunishinishi/node-colorprint.svg?style=flat
-[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/okunishinishi/node-colorprint.svg?style=flat
-[my_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide
-[my_lib_apiguide_url]: http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html
-[my_coverage_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report
-[my_coverage_report_url]: http://okunishinishi.github.io/node-colorprint/coverage/lcov-report/
-[my_gratipay_url]: https://gratipay.com/okunishinishi/
-[my_gratipay_budge_url]: http://img.shields.io/gratipay/okunishinishi.svg?style=flat
-[my_npm_url]: http://www.npmjs.org/package/colorprint
-[my_npm_budge_url]: http://img.shields.io/npm/v/colorprint.svg?style=flat
-[my_tag_url]: http://github.com/okunishinishi/node-colorprint/releases/tag/
-[my_tag_badge_url]: http://img.shields.io/github/tag/okunishinishi/node-colorprint.svg?style=flat
-[my_gemnasium_url]: http://gemnasium.com/okunishinishi/node-colorprint
-[my_gemnasium_badge_url]: http://img.shields.io/gemnasium/okunishinishi/node-colorprint.svg?style=flat
-
-<!-- Links end-->
 
