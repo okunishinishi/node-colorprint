@@ -66,7 +66,14 @@ colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 Using via CIL
 -------
 
-### CLI Usage
+### Install globally
+
+```
+$ npm install colorprint -g
+```
+
+
+### From Command Line
 
 ```bash
 #!/bin/bash
@@ -84,11 +91,6 @@ colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
 Fore more detail, see [API Guide of colorpint functions](http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html).
 
 
-### Install global for CLI usage.
-
-```
-$ npm install colorprint -g
-```
 
 Customizing
 --------
