@@ -88,12 +88,17 @@ function Colorprint() {
 }
 
 Colorprint.prototype = {
+    disabled: false,
     prepareMsg: function () {
         var s = this;
         var msg = formatMsg.apply(formatMsg, arguments);
         return [s.PREFIX, indentMsg(msg, s.indent), s.SUFFIX].join('');
     },
     writeToStdout: function (msg, color) {
+        var s = this;
+        if(s.disabled) {
+            return;
+        }
         console.log(decorateMsg(msg, color));
     },
     writeToStderr: function (msg, color) {
