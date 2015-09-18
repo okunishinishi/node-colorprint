@@ -3,7 +3,7 @@
  * Runs with nodeunit.
  */
 
-var decorateMsg = require('../lib/decorate_msg.js');
+var decorateMsg = require('../lib/msg/decorate_msg.js');
 
 exports['Decorate msg'] = function (test) {
     test.ok(decorateMsg('foo', 'green'));

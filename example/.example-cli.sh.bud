@@ -1,17 +1,17 @@
 /**
- * Bud file for example-usage
+ * Bud file for example-cli
  */
 
 "use strict";
 
-var colorprint = require('../../lib');
+var colorprint = require('../lib');
 
 module.exports = {
     force: true,
     mode: '444',
     data: {
         get usages() {
-            var levels = require('../../lib/.colorprint.json');
+            var levels = require('../lib/.colorprint.json');
             return Object.keys(levels)
                 .map(function (key) {
                     return {

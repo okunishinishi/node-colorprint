@@ -1,5 +1,5 @@
 /**
- * @overview {{pkg.description}}
+ * {{pkg.description}}
  * @version {{pkg.version}}
  * @module {{pkg.name}}
  * @author {@link {{pkg.author.url}}|{{pkg.author.name}}{{{END_BRACE}}}
@@ -11,43 +11,14 @@
 
 "use strict";
 
-var Colorprint = require('./colorprint');
+var Colorprint = require('./colorprint'),
+    pkg = require('../package.json'),
+    create = require('./create');
 
-var colorprint = new Colorprint();
-colorprint.version = '{{pkg.version}}';
-
-
-//---------------------
-// Classes
-//---------------------
+var colorprint = create();
+colorprint.create = create;
 colorprint.Colorprint = Colorprint;
+colorprint.version = pkg.version;
 
-//---------------------
-// Sub modules
-//---------------------
-{{#each submodules}}
-/**
- * {{this}}.
- * @name {@link module:colorprint/lib/{{camelcase @key}}|{{camelcase @key}}{{{../END_BRACE}}}
- * @memberof module:colorprint
- * @see module:colorprint/lib/{{snakecase @key}}
- */
-colorprint.{{camelcase @key}} = require('./{{snakecase @key}}');
-
-{{/each}}
-
-//---------------------
-// Aliases
-//---------------------
-{{#each aliases}}
-/**
- * This is an alias for {{aliasOf}}
- * @name {@link module:{{module}}|{{camelcase @key}}{{{../END_BRACE}}}
- * @memberof module:colorprint
- * @see module:{{module}}
- */
-colorprint.{{camelcase @key}} = {{aliasOf}};
-
-{{/each}}
 
 module.exports = colorprint;
