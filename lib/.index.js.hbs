@@ -13,10 +13,12 @@
 
 var Colorprint = require('./colorprint'),
     pkg = require('../package.json'),
+    define = require('./define'),
     create = require('./create');
 
 var colorprint = create();
 colorprint.create = create;
+colorprint.define = define;
 colorprint.Colorprint = Colorprint;
 colorprint.version = pkg.version;
 

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>colorprint Module: colorprint</title>
+	<title>colorprint Source: define.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,131 +55,45 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
-    		<h1 class="page-title">Module: colorprint</h1>
+    		<h1 class="page-title">Source: define.js</h1>
 			
 
-	<h1 class="page-title">Module: colorprint</h1>
+		<h1 class="page-title">Source: define.js</h1>
+    
 <section>
+	<article>
+		<pre
+			class="sunlight-highlight-javascript linenums">/**
+ * Define a logger.
+ * @memberof module:colorprint/lib
+ * @function define
+ * @param {object} properties - Logger prototype properties.
+ * @returns {function} - A logger constructor.
+ */
 
-<header>
-    
-</header>
+"use strict";
 
+var create = require('./create'),
+    extend = require('extend');
 
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Print ansi-colored message to stdout/stderr.</p></div>
-        
+/** @lends define */
+function define(properties){
+    function Logger(config){
+        var s = this;
+        extend(s, config);
+    }
+    Logger.prototype = create(properties);
+    return Logger;
+}
 
-        
-<dl class="details">
-	
-
-	
-	<dt class="tag-version">Version:</dt>
-	<dd class="tag-version">
-		<ul class="dummy">
-			<li>2.0.1</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-	<dt class="tag-author">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li><a href="http://okunishitaka.com">Taka Okunishi</li> 			</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="index.js.html">index.js</a>,
-				 <a href="index.js.html#sunlight-1-line-1">line 1</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li><a href="https://github.com/okunishinishi/node-colorprint#readme">https://github.com/okunishinishi/node-colorprint#readme</a></li>
-			</ul>
-	</dd>
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li>module:{@link</li>
-        
-            <li>module:{@link</li>
-        
-            <li>module:{@link</li>
-        </ul>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
+module.exports = define;
+</pre>
+	</article>
 </section>
+
 
 
 
@@ -189,10 +103,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3"></div>
-		</div>
 	
 
 </div>
@@ -224,69 +134,11 @@
 
 <script>
 $( function () {
-	$( "[id*=' );
-
-	$( "#toc" ).toc( {
-		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
-		},
-		selectors   : "h1,h2,h3,h4",
-		showAndHide : false,
-		scrollTo    : "100px"
-	} );
-
-	$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-	$( '.dropdown-toggle' ).dropdown();
-	//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
-
-	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-		var $this = $( this );
-
-		var example = $this.find( "code" );
-		exampleText = example.html();
-		var lang = /{@lang (.*?)}/.exec( exampleText );
-		if ( lang && lang[1] ) {
-			exampleText = exampleText.replace( lang[0], "" );
-			example.html( exampleText );
-			lang = lang[1];
-		} else {
-			lang = "javascript";
-		}
-
-		if ( lang ) {
-
-			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
-			.html( example.html() );
-
-		}
-	} );
-
-	Sunlight.highlightAll( {
-		lineNumbers : true,
-		showMenu : true,
-		enableDoclinks : true
-	} );
-} );
-</script>
-
-
-
-<!--Navigation and Symbol Display-->
-
-
-<!--Google Analytics-->
-
-
-</body>
-</html>
-]" ).each( function () {
+	$( "[id*='$']" ).each( function () {
 		var $this = $( this );
 
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-	</a> );
+	} );
 
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
