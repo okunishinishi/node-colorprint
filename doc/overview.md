@@ -1,1 +1,1 @@
-<img src="assets/images/screenshot.png"/>
+<img src="asset/images/screenshot.png"/>

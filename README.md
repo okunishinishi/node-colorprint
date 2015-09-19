@@ -35,7 +35,7 @@ Print ansi-colored message to stdout/stderr.
 
 <!-- Overview Start -->
 <a name="overview"></a>
-<img src="assets/images/screenshot.png"/>
+<img src="asset/images/screenshot.png"/>
 
 <!-- Overview End -->
 
