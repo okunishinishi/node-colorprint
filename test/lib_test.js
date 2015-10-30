@@ -8,6 +8,7 @@ var lib = require('../lib');
 exports['Lib'] = function (test) {
     test.ok(lib.create({}));
     test.ok(new lib.Colorprint({}));
+    lib.colors.red('foo');
     lib.notice('This is notice');
     lib.info('This is info');
     lib.debug('This is debug');
