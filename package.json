@@ -1,6 +1,6 @@
 {
   "name": "colorprint",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Print ansi-colored message to stdout/stderr.",
   "main": "lib",
   "bin": {
