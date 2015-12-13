@@ -68,12 +68,15 @@ Usage
 -------
 
 ```javascript
-var colorpint = require('colorpint');
+"use strict";
+
+const colorpint = require('colorpint');
 
 colorpint.notice('This is NOTICE'); //Pipe to stdout with magenta color.
 colorpint.info('This is INFO'); //Pipe to stdout with green color.
 colorpint.debug('This is DEBUG'); //Pipe to stdout with  color.
 colorpint.trace('This is TRACE'); //Pipe to stdout with white color.
+colorpint.warn('This is WARN'); //Pipe to stdout with yellow color.
 colorpint.error('This is ERROR'); //Pipe to stderr with red color.
 colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 
@@ -94,7 +97,6 @@ Using via CIL
 $ npm install colorprint -g
 ```
 
-
 ### From Command Line
 
 ```bash
@@ -104,13 +106,12 @@ colorpint notice "This is NOTICE from CLI" # Pipe to stdout with magenta color.
 colorpint info "This is INFO from CLI" # Pipe to stdout with green color.
 colorpint debug "This is DEBUG from CLI" # Pipe to stdout with  color.
 colorpint trace "This is TRACE from CLI" # Pipe to stdout with white color.
+colorpint warn "This is WARN from CLI" # Pipe to stdout with yellow color.
 colorpint error "This is ERROR from CLI" # Pipe to stderr with red color.
 colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
 
 
 ```
-
-Fore more detail, see [API Guide of colorpint functions](http://okunishinishi.github.io/node-colorprint/apiguide/module-colorprint_lib.html).
 
 
 
@@ -126,7 +127,9 @@ Customizing
 ### Customize the whole module.
 
 ```javascript
-var colorprint = require('colorprint');
+"use strict";
+
+const colorprint = require('colorprint');
 colorprint.PREFIX='Yeah!';
 colorprint.INFO_COLOR='blue';
 colorprint.info('This will be blue with prefix.');
@@ -136,8 +139,10 @@ colorprint.info('This will be blue with prefix.');
 ### Create new context to customize.
 
 ```javascript
-var Colorprint = require('colorprint/lib/colorprint');
-var colorprint = new Colorprint({
+"use strict";
+
+const Colorprint = require('colorprint/lib/colorprint');
+let colorprint = new Colorprint({
     PREFIX: '[Foo]',
     INFO_COLOR: 'blue'
 });
@@ -146,7 +151,7 @@ colorprint.info('This will be blue with prefix.');
 
 ```
 
-colorpint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
+colorprint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
 
 
 <!-- Section from "doc/readme/04-Customizing.md.hbs" End -->

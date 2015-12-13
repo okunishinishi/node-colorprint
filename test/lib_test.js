@@ -23,10 +23,12 @@ describe('lib', () => {
         lib.INFO('This is INFO');
         lib.DEBUG('This is DEBUG');
         lib.TRACE('This is TRACE');
-        lib.ERROR('This is WARN');
-        lib.WARN('This is ERROR');
+        lib.WARN('This is WARN');
+        lib.ERROR('This is ERROR');
         lib.FATAL('This is FATAL');
-        done();
+        process.nextTick(()=> {
+            done();
+        });
     });
 });
 

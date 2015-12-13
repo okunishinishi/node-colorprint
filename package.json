@@ -1,6 +1,6 @@
 {
   "name": "colorprint",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Print ansi-colored message to stdout/stderr.",
   "main": "lib",
   "bin": {
@@ -32,16 +32,16 @@
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "ape-covering": "*",
-    "ape-deploying": "*",
-    "ape-releasing": "*",
-    "ape-reporting": "*",
-    "ape-tasking": "*",
-    "ape-testing": "*",
-    "ape-tmpl": "*",
-    "ape-updating": "*",
-    "apiguide": "*",
-    "coz": "*"
+    "ape-covering": "^2.0.0",
+    "ape-deploying": "^2.0.0",
+    "ape-releasing": "^2.0.0",
+    "ape-reporting": "^2.0.3",
+    "ape-tasking": "^2.0.0",
+    "ape-testing": "^2.0.0",
+    "ape-tmpl": "^2.0.5",
+    "ape-updating": "^2.0.0",
+    "apiguide": "^1.0.10",
+    "coz": "^3.1.6"
   },
   "engines": {
     "node": ">=4.0.0"
