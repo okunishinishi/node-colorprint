@@ -1,22 +1,27 @@
 /**
  * Test case for formatMsg.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var formatMsg = require('../lib/msg/format_msg.js');
+const formatMsg = require('../lib/msg/format_msg.js'),
+    assert = require('assert');
 
-exports['Format msg'] = function (test) {
-    test.equal(formatMsg('Hey, my name is %s, I am %d years old.', 'John', 34, 'Hoo!'), "Hey, my name is John, I am 34 years old. Hoo!");
-    test.equal(formatMsg(''), '');
-    test.equal(formatMsg(), '');
-    test.equal(formatMsg('foo%f', 0.4), 'foo0.4');
-    test.equal(formatMsg('foo%j', 0.4), 'foo%j 0.4');
-    test.done();
-};
+describe('format', () => {
+    it('Format msg', (done) => {
+        assert.equal(formatMsg('Hey, my name is %s, I am %d years old.', 'John', 34, 'Hoo!'), "Hey, my name is John, I am 34 years old. Hoo!");
+        assert.equal(formatMsg(''), '');
+        assert.equal(formatMsg(), '');
+        assert.equal(formatMsg('foo%f', 0.4), 'foo0.4');
+        assert.equal(formatMsg('foo%j', 0.4), 'foo%j 0.4');
+        done();
+    });
 
-exports['Format msg with object'] = function (test) {
-    var msg = formatMsg({foo: 'bar'}, null);
-    test.ok(msg);
-    test.done();
-};
+    it('Format msg with object', (done) => {
+        let msg = formatMsg({foo: 'bar'}, null);
+        assert.ok(msg);
+
+        done();
+    });
+});
 

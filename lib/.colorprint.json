@@ -15,6 +15,10 @@
     "color": "white",
     "error": false
   },
+  "WARN": {
+    "color": "yellow",
+    "error": false
+  },
   "ERROR": {
     "color": "red",
     "error": true

@@ -8,26 +8,26 @@
 
 "use strict";
 
-var formatMsg = require('./msg/format_msg'),
+const formatMsg = require('./msg/format_msg'),
     decorateMsg = require('./msg/decorate_msg'),
     indentMsg = require('./msg/indent_msg'),
     extend = require('extend');
 
 /** @lends module:colorprint/lib~Colorprint */
 function Colorprint() {
-    var s = this;
+    let s = this;
     s.init.apply(s, arguments);
 }
 
 Colorprint.prototype = {
     disabled: false,
     prepareMsg: function () {
-        var s = this;
-        var msg = formatMsg.apply(formatMsg, arguments);
+        let s = this;
+        let msg = formatMsg.apply(formatMsg, arguments);
         return [s.PREFIX, indentMsg(msg, s.indent), s.SUFFIX].join('');
     },
     writeToStdout: function (msg, color) {
-        var s = this;
+        let s = this;
         if(s.disabled) {
             return;
         }
@@ -43,13 +43,13 @@ Colorprint.prototype = {
 {{#each levels}}
     /** Alias for module:colorprint/lib~Colorprint#{{lowercase @key}}. */
     {{uppercase @key}}: function () {
-        var s = this;
+        let s = this;
         s.{{lowercase @key}}.apply(s, arguments);
     },
 {{/each}}
     /** @constructs module:colorprint/lib~Colorprint */
     init: function (config) {
-        var s = this;
+        let s = this;
         extend(s, config);
     },
     /** Number of indent */
@@ -64,7 +64,7 @@ Colorprint.prototype = {
      * @param {...string} msg - Message to print.
      */
     {{lowercase @key}}: function (msg) {
-        var s = this;
+        let s = this;
         s.{{#if error}}writeToStderr{{else}}writeToStdout{{/if}}(s.prepareMsg.apply(s, arguments), s.{{uppercase @key}}_COLOR);
     }{{#if @last}}{{else}},{{/if}}
 {{/each}}

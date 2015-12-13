@@ -2,23 +2,23 @@
 
 "use strict";
 
-var program = require('commander'),
+const program = require('commander'),
     pkg = require('../package'),
     colorprint = require('../lib');
 
 program
     .version(pkg['version']);
 
-var levels = require('../lib/.colorprint.json');
+const levels = require('../lib/.colorprint.json');
 
-Object.keys(levels).forEach(function (key) {
+Object.keys(levels).forEach((key) => {
 
-    var print = colorprint[key.toLowerCase()].bind(colorprint);
+    let print = colorprint[key.toLowerCase()].bind(colorprint);
 
     program
         .command(key.toLowerCase() + ' [msg...]')
         .description('Print message for "' + key + '" level.')
-        .action(function (msg) {
+        .action((msg) => {
 
             print.apply(print, msg);
         });

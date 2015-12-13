@@ -1,26 +1,32 @@
 /**
  * Test case for lib.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var lib = require('../lib');
+const lib = require('../lib'),
+    assert = require('assert');
 
-exports['Lib'] = function (test) {
-    test.ok(lib.create({}));
-    test.ok(new lib.Colorprint({}));
-    lib.colors.red('foo');
-    lib.notice('This is notice');
-    lib.info('This is info');
-    lib.debug('This is debug');
-    lib.trace('This is trace');
-    lib.error('This is error');
-    lib.fatal('This is fatal');
+describe('lib', () => {
+    it('Lib', (done) => {
+        assert.ok(lib.create({}));
+        assert.ok(new lib.Colorprint({}));
+        lib.colors.red('foo');
+        lib.notice('This is notice');
+        lib.info('This is info');
+        lib.debug('This is debug');
+        lib.trace('This is trace');
+        lib.error('This is error');
+        lib.warn('This is warn');
+        lib.fatal('This is fatal');
 
-    lib.INFO('This is INFO');
-    lib.DEBUG('This is DEBUG');
-    lib.TRACE('This is TRACE');
-    lib.ERROR('This is ERROR');
-    lib.FATAL('This is FATAL');
-    test.done();
-};
+        lib.INFO('This is INFO');
+        lib.DEBUG('This is DEBUG');
+        lib.TRACE('This is TRACE');
+        lib.ERROR('This is WARN');
+        lib.WARN('This is ERROR');
+        lib.FATAL('This is FATAL');
+        done();
+    });
+});
 

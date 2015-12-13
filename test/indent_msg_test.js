@@ -1,20 +1,17 @@
 /**
  * Test case for indentMsg.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var indentMsg = require('../lib/msg/indent_msg.js');
+const indentMsg = require('../lib/msg/indent_msg.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
+describe('indent', () => {
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Indent msg'] = function (test) {
-    test.equal(indentMsg('foo', 2).trim(), 'foo');
-    test.done();
-};
+    it('Indent msg', (done) => {
+        assert.equal(indentMsg('foo', 2).trim(), 'foo');
+        done();
+    });
+});
 

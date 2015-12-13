@@ -1,28 +1,26 @@
 /**
  * Test case for define.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var define = require('../lib/define.js');
+const define = require('../lib/define.js'),
+    assert = require('assert');
 
-exports.setUp = function(done) {
-    done();
-};
+describe('define', ()=> {
 
-exports.tearDown = function(done) {
-    done();
-};
-
-exports['Define'] = function(test){
-    var Logger = define({
-        verbose:false
+    it('Define', (done) => {
+        let Logger = define({
+            verbose: false
+        });
+        let logger = new Logger({});
+        logger.INFO('This is custom INFO');
+        logger.DEBUG('This is custom DEBUG');
+        logger.TRACE('This is custom TRACE');
+        logger.ERROR('This is custom ERROR');
+        logger.WARN('This is custom WARN');
+        logger.FATAL('This is custom FATAL');
+        done();
     });
-    var logger = new Logger({});
-    logger.INFO('This is custom INFO');
-    logger.DEBUG('This is custom DEBUG');
-    logger.TRACE('This is custom TRACE');
-    logger.ERROR('This is custom ERROR');
-    logger.FATAL('This is custom FATAL');
-    test.done();
-};
+});
 

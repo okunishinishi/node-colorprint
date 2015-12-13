@@ -1,54 +1,62 @@
 /**
  * Test case for colorprint.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var Colorprint = require('../lib/colorprint.js');
+const Colorprint = require('../lib/colorprint.js'),
+    assert = require('assert');
 
-exports['Colorprint'] = function (test) {
-    var colorprint = new Colorprint({});
-    colorprint.notice('This is notice');
-    colorprint.info('This is info');
-    colorprint.debug('This is debug');
-    colorprint.trace('This is trace');
-    colorprint.error('This is error');
-    colorprint.fatal('This is fatal');
+describe('colorpint', () => {
+    it('Colorprint', (done) => {
+        let colorprint = new Colorprint({});
+        colorprint.notice('This is notice');
+        colorprint.info('This is info');
+        colorprint.debug('This is debug');
+        colorprint.trace('This is trace');
+        colorprint.error('This is error');
+        colorprint.warn('This is warn');
+        colorprint.fatal('This is fatal');
 
-    colorprint.INFO('This is INFO');
-    colorprint.DEBUG('This is DEBUG');
-    colorprint.TRACE('This is TRACE');
-    colorprint.ERROR('This is ERROR');
-    colorprint.FATAL('This is FATAL');
-    test.done();
-};
-
-
-exports['Colorprint with indent'] = function (test) {
-    var colorprint = new Colorprint({
-        indent: 2
+        colorprint.INFO('This is INFO');
+        colorprint.DEBUG('This is DEBUG');
+        colorprint.TRACE('This is TRACE');
+        colorprint.ERROR('This is ERROR');
+        colorprint.WARN('This is WARN');
+        colorprint.FATAL('This is FATAL');
+        done();
     });
-    colorprint.notice('This is indented notice');
-    colorprint.info('This is indented info');
-    colorprint.debug('This is indented debug');
-    colorprint.trace('This is indented trace');
-    colorprint.error('This is indented error');
-    colorprint.fatal('This is indented fatal');
-
-    colorprint.INFO('This is indented INFO');
-    colorprint.DEBUG('This is indented DEBUG');
-    colorprint.TRACE('This is indented TRACE');
-    colorprint.ERROR('This is indented ERROR');
-    colorprint.FATAL('This is indented FATAL');
-    test.done();
-};
 
 
-exports['Customize color print.'] = function (test) {
-    var colorprint = new Colorprint({
-        PREFIX: 'Yeah!',
-        SUFFIX: 'That\'s it!',
-        INFO_COLOR: 'blue'
+    it('Colorprint with indent', (done) => {
+        let colorprint = new Colorprint({
+            indent: 2
+        });
+        colorprint.notice('This is indented notice');
+        colorprint.info('This is indented info');
+        colorprint.debug('This is indented debug');
+        colorprint.trace('This is indented trace');
+        colorprint.error('This is indented error');
+        colorprint.warn('This is indented warn');
+        colorprint.fatal('This is indented fatal');
+
+        colorprint.INFO('This is indented INFO');
+        colorprint.DEBUG('This is indented DEBUG');
+        colorprint.TRACE('This is indented TRACE');
+        colorprint.WARN('This is indented WARN');
+        colorprint.ERROR('This is indented ERROR');
+        colorprint.FATAL('This is indented FATAL');
+        done();
     });
-    colorprint.info('This will be blue with prefix.');
-    test.done();
-};
+
+
+    it('Customize color print.', (done) => {
+        let colorprint = new Colorprint({
+            PREFIX: 'Yeah!',
+            SUFFIX: 'That\'s it!',
+            INFO_COLOR: 'blue'
+        });
+        colorprint.info('This will be blue with prefix.');
+        done();
+    });
+});

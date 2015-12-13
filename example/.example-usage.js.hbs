@@ -1,4 +1,6 @@
-var colorpint = require('colorpint');
+"use strict";
+
+const colorpint = require('colorpint');
 
 {{#each usages}}{{#each samples}}colorpint.{{../name}}('{{src}}'); //Pipe to {{pipe}} with {{color}} color.
 {{/each}}{{/each}}

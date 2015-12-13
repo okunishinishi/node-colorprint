@@ -8,14 +8,14 @@
 
 process.chdir(__dirname + '/..');
 
-var apeTasking = require('ape-tasking'),
+const apeTasking = require('ape-tasking'),
     coz = require('coz'),
     apiguide = require('apiguide');
 
-var pkg = require('../package.json');
+constpkg = require('../package.json');
 
 apeTasking.runTasks('doc', [
-    function (callback) {
+    (callback) => {
         apiguide([
             'lib/**/*.js',
             'README.md'

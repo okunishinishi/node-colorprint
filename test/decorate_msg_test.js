@@ -1,21 +1,25 @@
 /**
  * Test case for decorateMsg.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var decorateMsg = require('../lib/msg/decorate_msg.js');
+const decorateMsg = require('../lib/msg/decorate_msg.js'),
+    assert = require('assert');
 
-exports['Decorate msg'] = function (test) {
-    test.ok(decorateMsg('foo', 'green'));
-    test.equal(decorateMsg(null), null);
-    test.done();
-};
-
-
-exports['Decorate msg with invalid color.'] = function (test) {
-    test.throws(function () {
-        decorateMsg('foo', '__not_existing_color');
+describe('decorate', ()=> {
+    it('Decorate msg', (done) => {
+        assert.ok(decorateMsg('foo', 'green'));
+        assert.equal(decorateMsg(null), null);
+        done();
     });
-    test.done();
-};
+
+
+    it('Decorate msg with invalid color.', (done) => {
+        assert.throws(function () {
+            decorateMsg('foo', '__not_existing_color');
+        });
+        done();
+    });
+});
 

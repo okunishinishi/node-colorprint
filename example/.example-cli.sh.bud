@@ -4,21 +4,21 @@
 
 "use strict";
 
-var colorprint = require('../lib');
+const colorprint = require('../lib');
 
 module.exports = {
     force: true,
     mode: '444',
     data: {
         get usages() {
-            var levels = require('../lib/.colorprint.json');
+            let levels = require('../lib/.colorprint.json');
             return Object.keys(levels)
-                .map(function (key) {
+                .map((key) => {
                     return {
                         name: key.toLowerCase(),
                         samples: [
                             'This is ' + key
-                        ].map(function (src) {
+                        ].map((src) => {
                                 return {
                                     src: src,
                                     pipe: levels[key]['error'] ? 'stderr' : 'stdout',
