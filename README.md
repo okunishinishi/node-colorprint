@@ -48,9 +48,9 @@ Print ansi-colored message to stdout/stderr.
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
-<a name="section-doc-readme-01-installation-md"></a>
+<a name="section-doc-guides-01-installation-md"></a>
 Installation
 -----
 
@@ -59,11 +59,11 @@ npm install colorprint --save
 ```
 
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" End -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" End -->
 
-<!-- Section from "doc/readme/02-Usage.md.hbs" Start -->
+<!-- Section from "doc/guides/02-Usage.md.hbs" Start -->
 
-<a name="section-doc-readme-02-usage-md"></a>
+<a name="section-doc-guides-02-usage-md"></a>
 Usage
 -------
 
@@ -83,11 +83,11 @@ colorpint.fatal('This is FATAL'); //Pipe to stderr with bgRed color.
 ```
 
 
-<!-- Section from "doc/readme/02-Usage.md.hbs" End -->
+<!-- Section from "doc/guides/02-Usage.md.hbs" End -->
 
-<!-- Section from "doc/readme/03-CLI.md.hbs" Start -->
+<!-- Section from "doc/guides/03-CLI.md.hbs" Start -->
 
-<a name="section-doc-readme-03-c-l-i-md"></a>
+<a name="section-doc-guides-03-c-l-i-md"></a>
 Using via CIL
 -------
 
@@ -116,11 +116,11 @@ colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
 
 
 
-<!-- Section from "doc/readme/03-CLI.md.hbs" End -->
+<!-- Section from "doc/guides/03-CLI.md.hbs" End -->
 
-<!-- Section from "doc/readme/04-Customizing.md.hbs" Start -->
+<!-- Section from "doc/guides/04-Customizing.md.hbs" Start -->
 
-<a name="section-doc-readme-04-customizing-md"></a>
+<a name="section-doc-guides-04-customizing-md"></a>
 Customizing
 --------
 
@@ -154,7 +154,7 @@ colorprint.info('This will be blue with prefix.');
 colorprint is using [cli-color](https://github.com/medikoo/cli-color) for coloring and you can see [available colors here](https://github.com/medikoo/cli-color#colors).
 
 
-<!-- Section from "doc/readme/04-Customizing.md.hbs" End -->
+<!-- Section from "doc/guides/04-Customizing.md.hbs" End -->
 
 
 <!-- Sections Start -->
