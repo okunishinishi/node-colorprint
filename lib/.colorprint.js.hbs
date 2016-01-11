@@ -10,8 +10,7 @@
 
 const formatMsg = require('./msg/format_msg'),
     decorateMsg = require('./msg/decorate_msg'),
-    indentMsg = require('./msg/indent_msg'),
-    extend = require('extend');
+    indentMsg = require('./msg/indent_msg');
 
 /** @lends module:colorprint/lib~Colorprint */
 function Colorprint() {
@@ -50,7 +49,7 @@ Colorprint.prototype = {
     /** @constructs module:colorprint/lib~Colorprint */
     init: function (config) {
         let s = this;
-        extend(s, config);
+        Object.assign(s, config);
     },
     /** Number of indent */
     indent: 0,
