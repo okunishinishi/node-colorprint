@@ -1,28 +1,27 @@
 #!/usr/bin/env node
 
-"use strict";
+"use strict"
 
-const program = require('commander'),
-    pkg = require('../package'),
-    colorprint = require('../lib');
+const program = require('commander')
+const pkg = require('../package')
+const colorprint = require('../lib')
 
 program
-    .version(pkg['version']);
+  .version(pkg[ 'version' ])
 
-const levels = require('../lib/.colorprint.json');
+const levels = require('../lib/.colorprint.json')
 
 Object.keys(levels).forEach((key) => {
 
-    let print = colorprint[key.toLowerCase()].bind(colorprint);
+  let print = colorprint[ key.toLowerCase() ].bind(colorprint)
 
-    program
-        .command(key.toLowerCase() + ' [msg...]')
-        .description('Print message for "' + key + '" level.')
-        .action((msg) => {
-
-            print.apply(print, msg);
-        });
-});
+  program
+    .command(key.toLowerCase() + ' [msg...]')
+    .description('Print message for "' + key + '" level.')
+    .action((msg) => {
+      print.apply(print, msg)
+    })
+})
 
 program
-    .parse(process.argv);
+  .parse(process.argv)

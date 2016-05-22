@@ -2,16 +2,16 @@
  * Test case for create.
  * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const create = require('../lib/create.js'),
-    assert = require('assert');
+const create = require('../lib/create.js')
+const assert = require('assert')
 
 describe('create', () => {
+  it('Create', (done) => {
+    assert.ok(create({}))
+    done()
+  })
+})
 
-    it('Create', (done) => {
-        assert.ok(create({}));
-        done();
-    });
-});
-
+/* global describe, it */

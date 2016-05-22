@@ -1,6 +1,6 @@
 {
   "name": "colorprint",
-  "version": "3.0.4",
+  "version": "4.0.1",
   "description": "Print ansi-colored message to stdout/stderr.",
   "main": "lib",
   "bin": {
@@ -43,6 +43,7 @@
     "coz": "^3.1.6"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6",
+    "npm": ">=3"
   }
 }
