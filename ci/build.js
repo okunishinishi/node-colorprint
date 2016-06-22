@@ -1,21 +1,20 @@
 #!/usr/bin/env node
 
-"use strict";
+/**
+ * Build this project.
+ */
 
-process.chdir(__dirname + '/..');
+'use strict'
 
-const apeTasking = require('ape-tasking'),
-    coz = require('coz');
+process.chdir(`${__dirname}/..`)
+
+const apeTasking = require('ape-tasking')
+const coz = require('coz')
 
 apeTasking.runTasks('build', [
-    (callback) => {
-        coz.render([
-            '.*.bud',
-            'doc/**/.*.bud',
-            'example/**/.*.bud',
-            'lib/.*.bud',
-            'test/.*.bud'
-        ], callback);
-    }
-], true);
-
+  () => coz.render([
+    '.*.bud',
+    'lib/.*.bud',
+    'test/.*.bud'
+  ])
+], true)

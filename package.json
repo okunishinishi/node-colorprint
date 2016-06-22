@@ -7,7 +7,8 @@
     "colorprint": "bin/colorprint"
   },
   "scripts": {
-    "test": "./ci/test.js"
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js"
   },
   "repository": "okunishinishi/node-colorprint",
   "keywords": [
@@ -31,16 +32,16 @@
     "commander": "^2.9.0"
   },
   "devDependencies": {
-    "ape-covering": "^2.0.2",
-    "ape-deploying": "^2.0.0",
-    "ape-releasing": "^2.0.0",
-    "ape-reporting": "^2.0.3",
-    "ape-tasking": "^2.0.1",
-    "ape-testing": "^2.0.0",
-    "ape-tmpl": "^2.0.5",
-    "ape-updating": "^2.0.1",
-    "apiguide": "^1.0.10",
-    "coz": "^3.1.6"
+    "ape-covering": "^3.0.3",
+    "ape-deploying": "^4.0.2",
+    "ape-releasing": "^3.1.1",
+    "ape-reporting": "^3.0.1",
+    "ape-tasking": "^4.0.1",
+    "ape-testing": "^4.0.0",
+    "ape-tmpl": "^5.0.2",
+    "ape-updating": "^3.0.2",
+    "apiguide": "^3.0.0",
+    "coz": "^6.0.2"
   },
   "engines": {
     "node": ">=6",
