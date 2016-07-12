@@ -33,15 +33,14 @@
   },
   "devDependencies": {
     "ape-covering": "^3.0.3",
-    "ape-deploying": "^4.0.2",
-    "ape-releasing": "^3.1.1",
+    "ape-deploying": "^5.0.3",
+    "ape-releasing": "^4.0.1",
     "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.1",
-    "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.2",
-    "ape-updating": "^3.0.2",
-    "apiguide": "^3.0.0",
-    "coz": "^6.0.2"
+    "ape-tasking": "^4.0.3",
+    "ape-testing": "^4.0.1",
+    "ape-tmpl": "^5.0.12",
+    "ape-updating": "^4.0.4",
+    "coz": "^6.0.5"
   },
   "engines": {
     "node": ">=6",

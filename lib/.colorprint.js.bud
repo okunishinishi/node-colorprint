@@ -13,5 +13,5 @@ module.exports = {
 }
 
 if (!module.parent) {
-  require('coz').render(__filename);
+  require('coz').render(__filename)
 }
