@@ -1,4 +1,8 @@
 {
+  "POINT": {
+    "color": "blue",
+    "error": false
+  },
   "NOTICE": {
     "color": "magenta",
     "error": false

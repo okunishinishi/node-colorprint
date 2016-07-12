@@ -10,6 +10,7 @@ const assert = require('assert')
 describe('colorpint', () => {
   it('Colorprint', (done) => {
     let colorprint = new Colorprint({})
+    colorprint.point('This is point')
     colorprint.notice('This is notice')
     colorprint.info('This is info')
     colorprint.debug('This is debug')
