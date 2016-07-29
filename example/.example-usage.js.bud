@@ -4,14 +4,14 @@
 
 "use strict";
 
-const colorprint = require('../lib');
+const colorprint = require('../lib')
 
 module.exports = {
     force: true,
     mode: '444',
     data: {
         get usages() {
-            let levels = require('../lib/.colorprint.json');
+            let levels = require('../lib/.colorprint.json')
             return Object.keys(levels)
                 .map((key) => {
                     return {
@@ -26,12 +26,12 @@ module.exports = {
                                 }
                             })
                     }
-                });
+                })
         }
     }
 };
 
 
 if (!module.parent) {
-    require('coz').render(__filename);
+    require('coz').render(__filename)
 }
