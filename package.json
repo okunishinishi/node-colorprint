@@ -1,6 +1,6 @@
 {
   "name": "colorprint",
-  "version": "4.0.9",
+  "version": "4.0.10",
   "description": "Print ansi-colored message to stdout/stderr.",
   "main": "lib",
   "browser": "shim/browser",
