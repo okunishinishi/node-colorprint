@@ -12,7 +12,6 @@
 'use strict'
 
 const Colorprint = require('./colorprint')
-const pkg = require('../package.json')
 const cliColor = require('cli-color')
 const define = require('./define')
 const create = require('./create')
@@ -22,8 +21,7 @@ Object.assign(colorprint, {
  create,
  define,
  Colorprint,
- colors: cliColor,
- version: pkg.version,
+ colors: cliColor
 })
 
 module.exports = colorprint
