@@ -76,15 +76,15 @@ Usage
 ```javascript
 "use strict";
 
-const colorpint = require('colorpint')
+const colorprint = require('colorprint')
 
-colorpint.notice('This is NOTICE') //Pipe to stdout with magenta color.
-colorpint.info('This is INFO') //Pipe to stdout with green color.
-colorpint.debug('This is DEBUG') //Pipe to stdout with  color.
-colorpint.trace('This is TRACE') //Pipe to stdout with white color.
-colorpint.warn('This is WARN') //Pipe to stdout with yellow color.
-colorpint.error('This is ERROR') //Pipe to stderr with red color.
-colorpint.fatal('This is FATAL') //Pipe to stderr with bgRed color.
+colorprint.notice('This is NOTICE') //Pipe to stdout with magenta color.
+colorprint.info('This is INFO') //Pipe to stdout with green color.
+colorprint.debug('This is DEBUG') //Pipe to stdout with  color.
+colorprint.trace('This is TRACE') //Pipe to stdout with white color.
+colorprint.warn('This is WARN') //Pipe to stdout with yellow color.
+colorprint.error('This is ERROR') //Pipe to stderr with red color.
+colorprint.fatal('This is FATAL') //Pipe to stderr with bgRed color.
 
 ```
 
@@ -109,13 +109,13 @@ $ npm install colorprint -g
 ```bash
 #!/bin/bash
 
-colorpint notice "This is NOTICE from CLI" # Pipe to stdout with magenta color.
-colorpint info "This is INFO from CLI" # Pipe to stdout with green color.
-colorpint debug "This is DEBUG from CLI" # Pipe to stdout with  color.
-colorpint trace "This is TRACE from CLI" # Pipe to stdout with white color.
-colorpint warn "This is WARN from CLI" # Pipe to stdout with yellow color.
-colorpint error "This is ERROR from CLI" # Pipe to stderr with red color.
-colorpint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
+colorprint notice "This is NOTICE from CLI" # Pipe to stdout with magenta color.
+colorprint info "This is INFO from CLI" # Pipe to stdout with green color.
+colorprint debug "This is DEBUG from CLI" # Pipe to stdout with  color.
+colorprint trace "This is TRACE from CLI" # Pipe to stdout with white color.
+colorprint warn "This is WARN from CLI" # Pipe to stdout with yellow color.
+colorprint error "This is ERROR from CLI" # Pipe to stderr with red color.
+colorprint fatal "This is FATAL from CLI" # Pipe to stderr with bgRed color.
 
 
 ```
