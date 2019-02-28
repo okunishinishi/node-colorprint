@@ -27,6 +27,10 @@
     "color": "red",
     "error": true
   },
+  "ERROR_DETAIL": {
+    "color": "",
+    "error": true
+  },
   "FATAL": {
     "color": "bgRed",
     "error": true
