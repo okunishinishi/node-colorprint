@@ -59,7 +59,7 @@ Colorprint.prototype = {
    * Print {{lowercase @key}} message.
    * @param {...string} msg - Message to print.
    */
-  {{lowercase @key}} (msg) {
+  {{camelcase @key}} (msg) {
     this.{{#if error}}writeToStderr{{else}}writeToStdout{{/if}}(this.prepareMsg.apply(this, arguments), this.{{uppercase @key}}_COLOR)
   }{{#if @last}}{{else}},{{/if}}
 {{/each}}

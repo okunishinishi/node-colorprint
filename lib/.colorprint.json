@@ -1,37 +1,37 @@
 {
-  "POINT": {
+  "point": {
     "color": "blue",
     "error": false
   },
-  "NOTICE": {
+  "notice": {
     "color": "magenta",
     "error": false
   },
-  "INFO": {
+  "info": {
     "color": "green",
     "error": false
   },
-  "DEBUG": {
+  "debug": {
     "color": "",
     "error": false
   },
-  "TRACE": {
+  "trace": {
     "color": "white",
     "error": false
   },
-  "WARN": {
+  "warn": {
     "color": "yellow",
     "error": false
   },
-  "ERROR": {
+  "error": {
     "color": "red",
     "error": true
   },
-  "ERROR_DETAIL": {
+  "error_detail": {
     "color": "",
     "error": true
   },
-  "FATAL": {
+  "fatal": {
     "color": "bgRed",
     "error": true
   }
