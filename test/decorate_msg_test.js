@@ -10,6 +10,7 @@ const assert = require("assert");
 describe("decorate", () => {
   it("Decorate msg", done => {
     if (process.env.CI) {
+      done()
       return;
     }
     assert.ok(decorateMsg("foo", "green"));
@@ -19,6 +20,7 @@ describe("decorate", () => {
 
   it("Decorate msg with invalid color.", done => {
     if (process.env.CI) {
+      done()
       return;
     }
     assert.throws(function() {
