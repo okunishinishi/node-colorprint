@@ -18,6 +18,9 @@ describe("decorate", () => {
   });
 
   it("Decorate msg with invalid color.", done => {
+    if (process.env.CI) {
+      return;
+    }
     assert.throws(function() {
       decorateMsg("foo", "__not_existing_color");
     });
