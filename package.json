@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "ababel": "^6.0.3",
-    "amocha": "^6.0.0",
+    "amocha": "^7.1.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",
     "ape-tmpl": "^6.0.14",
